@@ -1,20 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
-    <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
-            id="org.apache.cordova.device" version="0.2.3">
-        <name>Device</name>
-        <description>Cordova Device Plugin</description>
-        <license>Apache 2.0</license>
-        <keywords>cordova,device</keywords>
-        <js-module src="www/device.js" name="device">
-            <clobbers target="device" />
-        </js-module>
-        <platform name="ios">
-            <config-file target="config.xml" parent="/*">
-                <feature name="Device">
-                    <param name="ios-package" value="CDVDevice"/>
-                </feature>
-            </config-file>
-            <header-file src="src/ios/CDVDevice.h" />
-            <source-file src="src/ios/CDVDevice.m" />
-        </platform>
-    </plugin>
+
+<!-- Copyright Nvizo Software -->
+
+<plugin xmlns="http://www.nvizo.com/"
+    id="com.nvizo.tesseract"
+    version="0.1">
+    <name>Tesseract</name>
+    <description>Cordova Tesseract Plugin</description>
+    <license>Apache 2.0</license>
+    <keywords>cordova,tesseract</keywords>
+    <repo>https://github.com/mkaisercross/tesseract-phonegap-plugin.git</repo>
+
+    <js-module src="www/Tesseract.js" name="tesseract">
+        <clobbers target="navigator.tesseract" />
+    </js-module>
+
+    <!-- android -->
+    <platform name="android">
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="Tesseract">
+                <param name="android-package" value="com.nvizo.tesseract.Tesseract"/>
+            </feature>
+        </config-file>
+     </platform>
+
+</plugin>
