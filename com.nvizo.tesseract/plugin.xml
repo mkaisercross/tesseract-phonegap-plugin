@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Copyright Nvizo Software -->
+
+<plugin xmlns="http://www.nvizo.com/"
+    id="com.nvizo.tesseract"
+    version="0.1">
+    <name>Tesseract</name>
+    <description>Cordova Tesseract Plugin</description>
+    <license>Apache 2.0</license>
+    <keywords>cordova,tesseract</keywords>
+    <repo>https://github.com/mkaisercross/tesseract-phonegap-plugin.git</repo>
+
+    <js-module src="www/Tesseract.js" name="tesseract">
+        <clobbers target="navigator.tesseract" />
+    </js-module>
+
+    <!-- android -->
+    <platform name="android">
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="Tesseract">
+                <param name="android-package" value="com.nvizo.tesseract.Tesseract"/>
+            </feature>
+        </config-file>
+     </platform>
+
+</plugin>

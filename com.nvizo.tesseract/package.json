@@ -1,0 +1,18 @@
+{
+    "version": "0.1",
+    "name": "com.nvizo.tesseract",
+    "cordova_name": "Tesseract",
+    "description": "Cordova Tesseract Plugin",
+    "license": "Apache 2.0",
+    "repo": "https://github.com/mkaisercross/tesseract-phonegap-plugin.git",
+    "keywords": [
+        "cordova",
+        "phonegap", 
+        "tesseract"
+    ],
+    "platforms": [
+        "android"
+    ],
+    "engines": [],
+    "englishdoc": "A tesseract plugin for phonegap"
+}
