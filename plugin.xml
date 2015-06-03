@@ -2,9 +2,9 @@
 
 <!-- Copyright Nvizo Software -->
 
-<plugin xmlns="http://www.nvizo.com/"
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
     id="com.nvizo.tesseract"
-    version="0.1">
+    version="1.0.2">
     <name>Tesseract</name>
     <description>Cordova Tesseract Plugin</description>
     <license>Apache 2.0</license>
