@@ -1,6 +1,6 @@
 
-
-    tesseract.run = function(imageData) {
+    window.tesseract = {}
+    window.tesseract.run = function(imageData) {
         cordova.exec(
             function(results) {
                 return results;
