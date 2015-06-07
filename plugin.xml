@@ -11,8 +11,8 @@
     <keywords>cordova,tesseract</keywords>
     <repo>https://github.com/mkaisercross/tesseract-phonegap-plugin.git</repo>
 
-    <js-module src="www/Tesseract.js" name="tesseract">
-        <clobbers target="navigator.tesseract" />
+    <js-module src="Tesseract.js" name="tesseract">
+        <clobbers target="tesseract" />
     </js-module>
 
     <!-- android -->
