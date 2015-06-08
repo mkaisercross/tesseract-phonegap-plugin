@@ -1,4 +1,4 @@
-package com.nvizo.tesseract.plugin;
+package com.nvizo.plugin;
 
 import org.apache.cordova.CordovaPlugin;
 import org.apache.cordova.CallbackContext;
