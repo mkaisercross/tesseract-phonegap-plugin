@@ -12,16 +12,16 @@ import org.json.JSONObject;
  */
 public class Echo extends CordovaPlugin {
 
-        @Override
-        public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
-            if (action.equals("run")) {
-                String image = args.getString(0);
-                String message = "Hello from tesseract";
-                callbackContext.success(message);
-                return true;
-            } else {
-                return false;
-            }
+    @Override
+    public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
+        if (action.equals("run")) {
+            String image = args.getString(0);
+            String message = "Hello from tesseract";
+            callbackContext.success(message);
+            return true;
+        } else {
+            return false;
         }
     }
+
 }
