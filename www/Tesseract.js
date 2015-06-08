@@ -1,12 +1,12 @@
 
-    window.tesseract = {}
-    window.tesseract.run = function(imageData) {
-        cordova.exec(
-            function(results) {
-                return results;
-            }, 
-            function(err) {
-                callback('Nothing to echo.');
-            }, "Tesseract", "run", [imageData]
-        );
-    };
+run_tesseract = {}
+run_tesseract = function(imageData) {
+    cordova.exec(
+        function(results) {
+            return results;
+        }, 
+        function(err) {
+            callback('Nothing to echo.');
+        }, "Tesseract", "run", [imageData]
+    );
+};
