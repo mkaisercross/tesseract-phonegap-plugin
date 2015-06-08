@@ -16,17 +16,12 @@ public class Echo extends CordovaPlugin {
         public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
             if (action.equals("run")) {
                 String image = args.getString(0);
-                this.echo("dummy ocr results returned", callbackContext);
+                String message = "Hello from tesseract";
+                callbackContext.success(message);
                 return true;
+            } else {
+                return false;
             }
-            return false;
-        }
-
-    private void echo(String message, CallbackContext callbackContext) {
-        if (message != null && message.length() > 0) {
-            callbackContext.success(message);
-        } else {
-            callbackContext.error("Expected one non-empty string argument.");
         }
     }
 }
