@@ -2,8 +2,8 @@
 
 tesseractFactory = function() {
     return {
-        run: function(data, successFunc) {
-            cordova.exec(successFunc,
+        run: function(data) {
+            cordova.exec(
                 function(results) {
                     successFunc(results)
                 }, 
