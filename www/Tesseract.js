@@ -1,12 +1,21 @@
 
-run_tesseract = {}
-run_tesseract = function(imageData) {
-    cordova.exec(
-        function(results) {
-            return results;
-        }, 
-        function(err) {
-            callback('Nothing to echo.');
-        }, "Tesseract", "run", [imageData]
-    );
-};
+
+tesseractFactory = function() {
+    return {
+        run: function(data, successFunc) {
+            cordova.exec(successFunc,
+                function(results) {
+                    successFunc(results)
+                }, 
+                function(err) {
+                    errorFunc()
+                }, "Tesseract", "run", [imageData]
+            );
+        },
+        successFunc: null,
+        errorFunc: null
+    };
+}
+
+
+
