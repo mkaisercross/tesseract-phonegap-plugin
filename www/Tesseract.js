@@ -1,4 +1,7 @@
 
+/**************************************************************
+ * Tesseract Factory function for use as angularJS service
+ **************************************************************/
 
 tesseractFactory = function() {
     return {
