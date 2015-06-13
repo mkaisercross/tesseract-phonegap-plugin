@@ -14,6 +14,8 @@ public class Tesseract extends CordovaPlugin {
 
     @Override
     public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
+        String libName = "tess"; 
+        System.loadLibrary( libName );
         if (action.equals("run")) {
             String image = args.getString(0);
             String message = "Hello from tesseract";
