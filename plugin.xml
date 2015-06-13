@@ -25,6 +25,14 @@
             </feature>
         </config-file>
         <source-file src="src/android/Tesseract.java" target-dir="src/com/nvizo/plugin/"/>
+        <lib-file src="src/android/jniLibs/armeabi/libtess.so" arch="device" />
+        <lib-file src="src/android/jniLibs/armeabi/liblept.so" arch="device" />
+        <lib-file src="src/android/jniLibs/armeabi-v7a/libtess.so" arch="device" />
+        <lib-file src="src/android/jniLibs/armeabi-v7a/liblept.so" arch="device" />
+        <lib-file src="src/android/jniLibs/x86/libtess.so" arch="device" />
+        <lib-file src="src/android/jniLibs/x86/liblept.so" arch="device" />
+        <lib-file src="src/android/jniLibs/mips/libtess.so" arch="device" />
+        <lib-file src="src/android/jniLibs/mips/liblept.so" arch="device" />
      </platform>
 
 </plugin>
