@@ -2,7 +2,9 @@
 
 tesseractFactory = function() {
     return {
-        run: function(data) {
+        run: function(data, successFunc, errorFunc) {
+            this.successFunc = successFunc;
+            this.errorFunc = errorFunc;
             cordova.exec(
                 function(results) {
                     successFunc(results)
@@ -11,9 +13,7 @@ tesseractFactory = function() {
                     errorFunc()
                 }, "Tesseract", "run", [imageData]
             );
-        },
-        successFunc: null,
-        errorFunc: null
+        }
     };
 }
 
