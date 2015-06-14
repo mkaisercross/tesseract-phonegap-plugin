@@ -15,7 +15,7 @@ import com.googlecode.tesseract.android.TessBaseAPI.PageIteratorLevel;
 
 import android.graphics.Bitmap;
 import android.util.Base64;
-import java.nio.ByteBuffer
+import java.nio.ByteBuffer;
 
 /**
  * This class echoes a string called from JavaScript.
