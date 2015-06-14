@@ -28,8 +28,9 @@ public class ReceiptOcr extends CordovaPlugin {
 
 
         if (action.equals("run")) {
+            String TESSBASE_PATH = "tesseract-ocr/tessdata";
             String imageStringBase64 = args.getString(0);
-            byte[] imageString = decode(imageStringBase64, DEFAULT);
+            byte[] imageString = decode(imageStringBase64, Base64.DEFAULT);
             Bitmap image;
             image.copyPixelsFromBuffer(imageString);
 
@@ -48,3 +49,4 @@ public class ReceiptOcr extends CordovaPlugin {
     }
 
 }
+
