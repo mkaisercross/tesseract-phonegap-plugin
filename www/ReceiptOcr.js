@@ -14,7 +14,7 @@ tesseractFactory = function() {
                 }, 
                 function(err) {
                     errorFunc()
-                }, "Tesseract", "run", [imageData]
+                }, "ReceiptOcr", "run", [imageData]
             );
         }
     };
