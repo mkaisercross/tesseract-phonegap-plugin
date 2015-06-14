@@ -22,13 +22,14 @@ import java.nio.ByteBuffer;
  */
 
 public class ReceiptOcr extends CordovaPlugin {
+    private static final String DEFAULT_LANGUAGE = "eng";
+    private static final String TESSBASE_PATH = "tesseract-ocr/tessdata";
 
     @Override
     public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
 
 
         if (action.equals("run")) {
-            String TESSBASE_PATH = "tesseract-ocr/tessdata";
             String imageStringBase64 = args.getString(0);
             ByteBuffer imageBuffer = ByteBuffer.wrap(Base64.decode(imageStringBase64, Base64.DEFAULT));
             Bitmap image;
