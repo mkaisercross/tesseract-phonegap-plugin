@@ -31,6 +31,7 @@ public class ReceiptOcr extends CordovaPlugin {
             String TESSBASE_PATH = "tesseract-ocr/tessdata";
             String imageStringBase64 = args.getString(0);
             ByteBuffer imageBuffer = ByteBuffer.wrap(Base64.decode(imageStringBase64, Base64.DEFAULT));
+            Bitmap image;
             image.copyPixelsFromBuffer(imageBuffer);
 
             final TessBaseAPI baseApi = new TessBaseAPI();
