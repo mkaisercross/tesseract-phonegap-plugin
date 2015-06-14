@@ -24,11 +24,16 @@
                 <param name="android-package" value="com.nvizo.plugin.Tesseract"/>
             </feature>
         </config-file>
-        <source-file src="src/android/Tesseract.java" target-dir="src/com/nvizo/plugin/"/>
+        <source-file src="src/android/ReceiptOcr.java" target-dir="src/com/nvizo/plugin/"/>
+
+        <source-file src="src/android/Foo.java" target-dir="src/com/alunny/foo" />
+
         <lib-file src="src/android/jniLibs/armeabi/" arch="device" />
         <lib-file src="src/android/jniLibs/armeabi-v7a/" arch="device" />
         <lib-file src="src/android/jniLibs/x86/" arch="device" />
         <lib-file src="src/android/jniLibs/mips/" arch="device" />
+
+
      </platform>
 
 </plugin>
