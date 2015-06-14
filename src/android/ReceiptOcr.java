@@ -13,6 +13,8 @@ import com.googlecode.tesseract.android.ResultIterator;
 import com.googlecode.tesseract.android.TessBaseAPI;
 import com.googlecode.tesseract.android.TessBaseAPI.PageIteratorLevel;
 
+import android.graphics.Bitmap;
+import android.util.Base64;
 
 
 /**
@@ -26,9 +28,19 @@ public class ReceiptOcr extends CordovaPlugin {
 
 
         if (action.equals("run")) {
-            String image = args.getString(0);
-            String message = "Hello from tesseract";
-            callbackContext.success(message);
+            String imageStringBase64 = args.getString(0);
+            byte[] imageString = decode(imageStringBase64, DEFAULT);
+            Bitmap image;
+            image.copyPixelsFromBuffer(imageString);
+
+            final TessBaseAPI baseApi = new TessBaseAPI();
+            baseApi.init(TESSBASE_PATH, DEFAULT_LANGUAGE);
+            baseApi.setPageSegMode(TessBaseAPI.PageSegMode.PSM_AUTO_OSD);
+            baseApi.setImage(image);
+            final String hOcr = baseApi.getHOCRText(0);
+
+
+            callbackContext.success(hOcr);
             return true;
         } else {
             return false;
