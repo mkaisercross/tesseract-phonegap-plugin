@@ -15,7 +15,7 @@ import com.googlecode.tesseract.android.TessBaseAPI.PageIteratorLevel;
 
 import android.graphics.Bitmap;
 import android.util.Base64;
-
+import java.nio.ByteBuffer
 
 /**
  * This class echoes a string called from JavaScript.
@@ -30,9 +30,8 @@ public class ReceiptOcr extends CordovaPlugin {
         if (action.equals("run")) {
             String TESSBASE_PATH = "tesseract-ocr/tessdata";
             String imageStringBase64 = args.getString(0);
-            byte[] imageString = decode(imageStringBase64, Base64.DEFAULT);
-            Bitmap image;
-            image.copyPixelsFromBuffer(imageString);
+            ByteBuffer imageBuffer = ByteBuffer.wrap(Base64.decode(imageStringBase64, Base64.DEFAULT));
+            image.copyPixelsFromBuffer(imageBuffer);
 
             final TessBaseAPI baseApi = new TessBaseAPI();
             baseApi.init(TESSBASE_PATH, DEFAULT_LANGUAGE);
