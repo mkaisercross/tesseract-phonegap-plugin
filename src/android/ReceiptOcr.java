@@ -7,15 +7,24 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+
+import com.googlecode.leptonica.android.Pixa;
+import com.googlecode.tesseract.android.ResultIterator;
+import com.googlecode.tesseract.android.TessBaseAPI;
+import com.googlecode.tesseract.android.TessBaseAPI.PageIteratorLevel;
+
+
+
 /**
  * This class echoes a string called from JavaScript.
  */
+
 public class Tesseract extends CordovaPlugin {
 
     @Override
     public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
-        String libName = "tess"; 
-        System.loadLibrary( libName );
+
+
         if (action.equals("run")) {
             String image = args.getString(0);
             String message = "Hello from tesseract";
