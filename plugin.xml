@@ -3,7 +3,7 @@
 <!-- Copyright Nvizo Software -->
 
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
-    id="com.nvizo.tesseract"
+    id="com.nvizo.receiptocr"
     version="1.0.2">
     <name>Tesseract</name>
     <description>Cordova Tesseract Plugin</description>
@@ -11,17 +11,17 @@
     <keywords>cordova,tesseract</keywords>
     <repo>https://github.com/mkaisercross/tesseract-phonegap-plugin.git</repo>
 
-    <asset src="www/Tesseract.js" target="Tesseract.js"/>
+    <asset src="www/ReceiptOcr.js" target="ReceiptOcr.js"/>
 
-    <js-module src="www/Tesseract.js" name="tesseract">
-        <clobbers target="tesseract" />
+    <js-module src="www/ReceiptOcr.js" name="ReceiptOcr">
+        <clobbers target="ReceiptOcr" />
     </js-module>
 
     <!-- android -->
     <platform name="android">
         <config-file target="res/xml/config.xml" parent="/*">
-            <feature name="Tesseract">
-                <param name="android-package" value="com.nvizo.plugin.Tesseract"/>
+            <feature name="ReceiptOcr">
+                <param name="android-package" value="com.nvizo.plugin.ReceiptOcr"/>
             </feature>
         </config-file>
         <source-file src="src/android/" target-dir="src/com/nvizo/plugin/"/>
