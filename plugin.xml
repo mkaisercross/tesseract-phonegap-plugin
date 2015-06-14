@@ -24,9 +24,31 @@
                 <param name="android-package" value="com.nvizo.plugin.Tesseract"/>
             </feature>
         </config-file>
-        <source-file src="src/android/ReceiptOcr.java" target-dir="src/com/nvizo/plugin/"/>
+        <source-file src="src/android/" target-dir="src/com/nvizo/plugin/"/>
 
-        <source-file src="src/android/Foo.java" target-dir="src/com/alunny/foo" />
+        <source-file src="src/android/AdaptiveMap.java" target-dir="src/com/nvizo/plugin/"/>
+        <source-file src="src/android/Binarize.java" target-dir="src/com/nvizo/plugin/"/>
+        <source-file src="src/android/Box.java" target-dir="src/com/nvizo/plugin/"/>
+        <source-file src="src/android/Clip.java" target-dir="src/com/nvizo/plugin/"/>
+        <source-file src="src/android/Constants.java" target-dir="src/com/nvizo/plugin/"/>
+        <source-file src="src/android/Convert.java" target-dir="src/com/nvizo/plugin/"/>
+        <source-file src="src/android/Edge.java" target-dir="src/com/nvizo/plugin/"/>
+        <source-file src="src/android/Enhance.java" target-dir="src/com/nvizo/plugin/"/>
+        <source-file src="src/android/GrayQuant.java" target-dir="src/com/nvizo/plugin/"/>
+        <source-file src="src/android/jniLibs" target-dir="src/com/nvizo/plugin/"/>
+        <source-file src="src/android/JpegIO.java" target-dir="src/com/nvizo/plugin/"/>
+        <source-file src="src/android/MorphApp.java" target-dir="src/com/nvizo/plugin/"/>
+        <source-file src="src/android/PageIterator.java" target-dir="src/com/nvizo/plugin/"/>
+        <source-file src="src/android/Pixa.java" target-dir="src/com/nvizo/plugin/"/>
+        <source-file src="src/android/Pix.java" target-dir="src/com/nvizo/plugin/"/>
+        <source-file src="src/android/ReadFile.java" target-dir="src/com/nvizo/plugin/"/>
+        <source-file src="src/android/ReceiptOcr.java" target-dir="src/com/nvizo/plugin/"/>
+        <source-file src="src/android/ResultIterator.java" target-dir="src/com/nvizo/plugin/"/>
+        <source-file src="src/android/Rotate.java" target-dir="src/com/nvizo/plugin/"/>
+        <source-file src="src/android/Scale.java" target-dir="src/com/nvizo/plugin/"/>
+        <source-file src="src/android/Skew.java" target-dir="src/com/nvizo/plugin/"/>
+        <source-file src="src/android/TessBaseAPI.java" target-dir="src/com/nvizo/plugin/"/>
+        <source-file src="src/android/WriteFile.java" target-dir="src/com/nvizo/plugin/"/>
 
         <lib-file src="src/android/jniLibs/armeabi/" arch="device" />
         <lib-file src="src/android/jniLibs/armeabi-v7a/" arch="device" />
@@ -37,3 +59,5 @@
      </platform>
 
 </plugin>
+
+
