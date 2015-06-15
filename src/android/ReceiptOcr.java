@@ -16,6 +16,7 @@ import com.googlecode.tesseract.android.TessBaseAPI.PageIteratorLevel;
 import android.graphics.Bitmap;
 import android.util.Base64;
 import java.nio.ByteBuffer;
+import android.graphics.BitmapFactory;
 
 /**
  * This class echoes a string called from JavaScript.
@@ -33,7 +34,9 @@ public class ReceiptOcr extends CordovaPlugin {
             String imageJpegBase64 = args.getString(0);
             //ByteBuffer imageBuffer = ByteBuffer.wrap();
             byte[] imageJpeg = Base64.decode(imageJpegBase64, Base64.DEFAULT);
-            Bitmap image = decodeByteArray(imageJpeg, 0, imageJpeg.length, Bitmap.Config.ARGB_8888);
+            BitmapFactory factory = new BitmapFactory()
+
+            Bitmap image = factory.decodeByteArray(imageJpeg, 0, imageJpeg.length, Bitmap.Config.ARGB_8888);
             //Bitmap image = Bitmap.createBitmap(1024,768);
             //image.copyPixelsFromBuffer(imageBuffer);
 
