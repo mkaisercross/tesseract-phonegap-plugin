@@ -32,7 +32,7 @@ public class ReceiptOcr extends CordovaPlugin {
         if (action.equals("run")) {
             String imageStringBase64 = args.getString(0);
             ByteBuffer imageBuffer = ByteBuffer.wrap(Base64.decode(imageStringBase64, Base64.DEFAULT));
-            Bitmap image = new Bitmap(1024,768);
+            Bitmap image = Bitmap.createBitmap(1024,768);
             image.copyPixelsFromBuffer(imageBuffer);
 
             final TessBaseAPI baseApi = new TessBaseAPI();
