@@ -36,7 +36,7 @@ public class ReceiptOcr extends CordovaPlugin {
             byte[] imageJpeg = Base64.decode(imageJpegBase64, Base64.DEFAULT);
             BitmapFactory factory = new BitmapFactory();
 
-            Bitmap image = factory.decodeByteArray(imageJpeg, 0, imageJpeg.length, Bitmap.Config.ARGB_8888);
+            Bitmap image = factory.decodeByteArray(imageJpeg, 0, imageJpeg.length);
             //Bitmap image = Bitmap.createBitmap(1024,768);
             //image.copyPixelsFromBuffer(imageBuffer);
 
