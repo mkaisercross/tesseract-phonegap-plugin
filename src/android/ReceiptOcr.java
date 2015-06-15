@@ -24,7 +24,7 @@ import android.graphics.BitmapFactory;
 
 public class ReceiptOcr extends CordovaPlugin {
     private static final String DEFAULT_LANGUAGE = "eng";
-    private static final String TESSBASE_PATH = "tesseract-ocr/tessdata";
+    private static final String TESSBASE_PATH = "tesseract-ocr/";
 
     @Override
     public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
