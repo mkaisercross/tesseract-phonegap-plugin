@@ -18,6 +18,18 @@ import android.util.Base64;
 import java.nio.ByteBuffer;
 import android.graphics.BitmapFactory;
 
+import java.io.File;
+import java.io.InputStream;
+import java.io.OutputStream;
+import java.io.IOException;
+
+import android.content.SharedPreferences;
+import android.os.Environment;
+import android.util.Log;
+import android.content.res.AssetManager;
+import java.io.FileOutputStream;
+
+
 /**
  * This class echoes a string called from JavaScript.
  */
@@ -102,7 +114,7 @@ public class ReceiptOcr extends CordovaPlugin {
      * -- Copy the file from the assets folder to the sdCard
      * ===========================================================
      **/
-    private bool CopyAssets() {
+    private boolean CopyAssets() {
         AssetManager assetManager = getAssets();
         String[] files = null;
         try {
