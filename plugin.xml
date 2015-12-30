@@ -26,7 +26,7 @@
         </config-file>
 
         <source-file src="src/android/" target-dir="src/com/nvizo/plugin/"/>
-        <resource-file src="src/android/tesseract-ocr/tessdata" target-dir="main/assets/tessdata" />
+        <source-file src="assets/tessdata/eng.traineddata" target-dir="assets/tesseract-ocr/tessdata" />
 
         <!--<source-file src="src/android/AdaptiveMap.java" target-dir="src/com/nvizo/plugin/"/>
         <source-file src="src/android/Binarize.java" target-dir="src/com/nvizo/plugin/"/>
@@ -61,6 +61,8 @@
      </platform>
 
 </plugin>
+
+
 
 
 
